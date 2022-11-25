@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+/* Variables */
+
+:root {
+    --blue: rgb(99, 6, 174);
+    --white: #ffffff;
+    --black: #000000;
+    --gray1: #c1c3c6;
+    --gray2: #919496;
+    --gray3: #616467;
+    --red: #d88e04;
+    /* --hero-bg-color: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 0, 128)), to(rgb(47, 1, 255))); */
+    --grad: -webkit-gradient(linear, left top, left bottom, from(rgb(99, 6, 174)), to(rgb(227, 168, 59)));
+    --grad1: -webkit-linear-gradient(#702aae, #89395e);
+}
+
+
+/* Overwrite browser defaults */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}

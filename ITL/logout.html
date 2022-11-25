@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soundify</title>
+    <link rel="icon" href="img/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/albums.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/media-queries.css" />
+
+    
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <div class="musicana-logo">
+                <a href="index.html">
+                <h1 style="font-family: 'Style Script', cursive; ">Soundify <i class="fa fa-headphones"></i></h1>
+                </a>
+            </div>
+            <!-- Menu that will be shown on mobile devices-->
+            <nav class="nav-mobile">
+                <!-- Profile -->
+                <div class="profile">
+                    <i class="fa fa-user" style="font-size:1.7rem; color:var(--blue);"></i>
+                </div>
+                <!-- Drop  down Menu -->
+                <input type="checkbox" class="toggler" />
+                <div class="overlay-menu">
+                    <div></div>
+                </div>
+                <div class="menu">
+                    <div class="background-overlay"></div>
+                    <div class="menu-overlay">
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li role="separator"></li>
+                            <li><a href="signup.html">Create Account</a></li>
+                            <li><a href="login.html">Log In</a></li>
+                        </ul>
+                        <div class="menu-overlay-logo">
+                            <div class="musicana-logo">
+                                <h1 style="font-family: 'Serif', Garamound;">Soundify <i class="fa fa-headphones"></i></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Menu that will be shown on Desktop -->
+            <nav class="nav-desktop">
+                <!-- Site menu -->
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li role="separator"></li>
+                </ul>
+                <!-- Profile menu -->
+                <div class="profile-container">
+                    <input type="checkbox" class="dropdown-menu-toggler" />
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li><a href="signup.html">Create Account</a></li>
+                            <li><a href="login.html">Log In</a></li>
+                        </ul>
+                    </div>
+                    <div class="profile">
+                        <i class="fa fa-user" style="font-size:1.7rem; color:white"></i>
+                    </div>
+                    <ul>
+                        <li>
+                            <i class="fa fa-chevron-down " style="color:white; "></i>
+                        </li>
+                    </ul>
+                    <!-- <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p> -->
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO CONTAINER-->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <p><br><br></p>
+                    <div style="font-family: 'Serif', Garamound; color: rgb(255, 255, 255);">Successfully Logged Out!</div>
+                </h1>
+                <!-- <a class="hero-button" href="signup.html">Create Account</a> -->
+                <!-- <p><br></p> -->
+                <p><br><br><br><br><br><br><br></p>
+                <a class="hero-button" id="opensignup" href="index.html"><h3>HOME</h3></a>
+                <!-- <p><br><br></p>
+                <a class="hero-button" id="openlogin"  href="login.html"> <h3>    LOG IN    </h3></a> -->
+                <p><br><br><br><br><br><br><br><br><br><br><br><br></p>
+                <!-- <p><br><br><br><br><br><br><br><br><br><br><br><br></p> -->
+                <p><br><br><br><br><br><br><br></p>
+                <!-- <p><br><br><br><br><br><br><br></p> -->
+                <p><br><br><br></p>
+                <!-- <a href="#alb"><i class="fa fa-chevron-circle-down " ></i></a> -->
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <nav class="footer-nav">
+            <div class="logo-footer">
+                <div class="musicana-logo">
+                    <a href="index.html">
+                    <h1 style="font-family: 'Style Script', cursive;">Soundify <i class="fa fa-headphones"></i></h1>
+                    </a>
+                </div>
+            </div>
+            <div class="top-links">
+                <div class="company-links">
+                    <ul>
+                        <li>COMPANY</li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">For the Record</a></li>
+                    </ul>
+                </div>
+                <div class="communities-links">
+                    <ul>
+                        <li>COMMUNITIES</li>
+                        <li><a href="#">For artists</a></li>
+                        <li><a href="#">Developers</a></li>
+                        <li><a href="#">Advertising</a></li>
+                    </ul>
+                </div>
+                <div class="useful-links">
+                    <ul>
+                        <li>USEFUL LINKS</li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Web Player</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="social-icons">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-facebook-f" ></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-links">
+                <ul>
+
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">About Ads</a></li>
+
+                </ul>
+                <span>&copy; 2022 Soundify</span>
+            </div>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

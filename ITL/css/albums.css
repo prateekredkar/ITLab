@@ -1,0 +1,161 @@
+body {
+    background: -webkit-linear-gradient(#610473, #d88e04);
+    background-attachment: fixed;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#alb {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.albums-container a i {
+    color: white;
+    font-size: 5rem;
+    padding-bottom: 6rem;
+}
+
+.albums-container a .fa:hover {
+    color: var(--black);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+
+/* .animate-enter {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+} */
+
+.albums-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 11rem 1.5rem;
+    color: var(--white);
+}
+
+.albums-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.albums-content p {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.albums-cards-container {
+    display: flex;
+    overflow: auto;
+    padding-bottom: 8rem;
+}
+
+
+/* Removes the horizontal scrollbar */
+
+.albums-cards-container::-webkit-scrollbar {
+    display: none;
+}
+
+.album {
+    min-width: 50%;
+    padding-left: 3.5rem;
+    box-sizing: content-box;
+}
+
+.album:first-child {
+    padding-left: 1.5rem;
+}
+
+.album:last-child {
+    padding-right: 1.5rem;
+}
+
+.album img {
+    width: 100%;
+    box-shadow: 0.1rem 0.1rem 1.6rem -0.2rem rgba(0, 0, 0, 0.3);
+}
+
+.album img:hover {
+    cursor: pointer;
+}
+
+
+/* Container for the song title, artist name and play now button */
+
+.album-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+/*Avoid text from wrapping to the next line and add an ellipsis at the end */
+
+.album-info h2,
+.album-info h4 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+
+/* Song title */
+
+.album-info h2 {
+    font-size: 1.75rem;
+    color: var(--black);
+    padding-top: 2rem;
+}
+
+
+/* Artist name */
+
+.album-info h4 {
+    font-size: 1.5rem;
+    color: var(--white);
+    margin: 1rem 0;
+}
+
+.album-info h2,
+.album-info h4 {
+    cursor: pointer;
+}
+
+.album-info a {
+    font-size: 1.5rem;
+    color: var(--blue);
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: all 0.4s ease;
+    text-shadow: 1px 1px black;
+}
+
+.album-info a:hover {
+    color: var(--red);
+    text-shadow: 1px 1px black;
+}

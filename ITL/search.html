@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search Page</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .search-wrapper {
+            display: flex;
+        }
+        
+        .search_box {
+            background: rgb(59, 55, 55);
+            position: relative;
+            padding: 10px;
+            border-radius: 50px;
+            display: flex;
+        }
+        
+        .search_box .search_btn {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: rgb(130, 130, 130);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        
+        .search_box .input_search {
+            outline: none;
+            border: 0;
+            background: rgb(130, 130, 130);
+            border-radius: 50px;
+            padding: 15px 20px;
+            width: 500px;
+            height: 35px;
+            color: #fff;
+        }
+        
+            ::placeholder {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sidebar Starts-->
+    <div class="sidebar">
+        <!-- Sidebar Bottom starts -->
+        <div class="sidebar-bottom">
+            <!--Sidebar Logo-->
+            <div class="headLogo">
+                <center>
+                    <h1 style="font-family: 'Style Script', cursive;">Soundify <i class="fa fa-headphones"></i></h1>
+                </center>
+            </div>
+
+            <div class="sidebarList">
+                <!-- <b> -->
+                <a class="sidebarButtons" href="home.html"><i class="fa fa-home"></i>Home</a>
+                <a class="sidebarButtons sidebar-select" href="search.html"><i class="fa fa-search"></i>Search</a>
+                <a class="sidebarButtons" href="library.html"><i class="fa fa-database"></i>Library</a>
+                <!-- </b> -->
+            </div>
+            <!--Sidebar Lists-->
+
+                <div class="sidebarList">
+                <h2>Playlists</h2>
+
+                <div class="sidebarPlay">
+                    <!-- Adding JS in Inline Code -->
+                    <a class="bottomLine" href="#" onClick="alert('Liked Songs is Selected !');">
+                        <i class="fa fa-chevron-circle-right"></i>
+                        <span>Liked Songs</span>
+                    </a>
+                </div>
+                <!--sidebar list item-->
+
+                <div class="sidebarPlay">
+                    <a class="bottomLine" href="#" onClick="alert('Favourite Music is selected !');">
+                        <i class="fa fa-heart"></i>
+                        <span>Favourite Playlist</span></a>
+                </div>
+                <!--sidebar list item-->
+                <!-- <div class="sidebarPlay">
+                    <a class="bottomLine" href="#" onClick="alert('Purchased is selected !');">
+                        <i class="fa fa-shopping-bag"></i>
+                        <span>Purchased</span>
+                    </a>
+                </div> -->
+            </div>
+            <!--sidebar playlists-->
+
+                <div class="sidebarPlaylists">
+                    <h2 style="color:rgb(190,190,190)">Albums</h2>
+                    <a href="playlist1.html"><i class="fa fa-list-ul"></i>Native</a>
+                    <a href="playlist2.html"><i class="fa fa-list-ul"></i>Handwritten</a>
+                    <a href="playlist3.html"><i class="fa fa-list-ul"></i>Reputation</a>
+                    <a href="playlist4.html"><i class="fa fa-list-ul"></i>Rare</a>
+                    <a href="playlist5.html"><i class="fa fa-list-ul"></i>After Hours</a>
+                    <a href="playlist6.html"><i class="fa fa-list-ul"></i>Divide</a>
+                </div>
+            <!--sidebar playlists-->
+
+            <!-- Log out -->
+            <div class="sidebarList">
+                <a class="sidebarButtons" href="index.html"> <i class="fa fa-sign-out" style="font-size:20px"></i>Log Out</a>
+            </div>
+            <!--sidebar bottom closes-->
+        </div>
+        <!--sidebar ends-->
+    </div>
+
+    <!-- Main Part of Home Page -->
+    <div class="main">
+        <div class="mainBottom">
+            <div class="search-wrapper">
+                <div class="search_box">
+                    <div class="search_btn"><i class="fa fa-search"></i></div>
+                    <input type="text" class="input_search" placeholder="What are you looking for?">
+                </div>
+            </div>
+            <!-- Main Row 1 -->
+            <div class="MainRow">
+                <div class="RowTitle">
+                    <h2>Genres</h2>
+                </div>
+
+                <!--MainCol 1-->
+                <div class="MainCol">
+
+                    <h3>Disco</h3>
+                    <p>Description</p>
+                </div>
+
+                <!--MainCol 2-->
+                <div class="MainCol">
+
+                    <h3>Dance</h3>
+                    <p>Description</p>
+                </div>
+
+                <!--MainCol 3-->
+                <div class="MainCol">
+
+                    <h3>Pop</h3>
+                    <p>Description</p>
+                </div>
+
+
+                <!--MainCol 4-->
+                <div class="MainCol">
+
+                    <h3>Bhajan</h3>
+                    <p>Description</p>
+                </div>
+
+                <!--MainCol 5-->
+                <div class="MainCol">
+
+                    <h3>Rock</h3>
+                    <p>Description</p>
+                </div>
+
+                <!--MainCol 6-->
+                <div class="MainCol">
+
+                    <h3>Ghazal</h3>
+                    <p>Description</p>
+                </div>
+
+                <!--MainCol 7-->
+                <div class="MainCol">
+
+                    <h3>Qawwali</h3>
+                    <p>Description</p>
+                </div>
+
+                <!--MainCol 8-->
+                <div class="MainCol">
+
+                    <h3>Classical</h3>
+                    <p>Description</p>
+                </div>
+
+                <!--MainCol 9-->
+                <div class="MainCol">
+
+                    <h3>Fusion</h3>
+                    <p>Description</p>
+                </div>
+
+                <!--MainCol 10-->
+                <div class="MainCol">
+
+                    <h3>Romantic</h3>
+                    <p>Description</p>
+                </div>
+
+                <!--MainCol 11-->
+                <div class="MainCol">
+
+                    <h3>Patriotic</h3>
+                    <p>Description</p>
+                </div>
+                <!--Main Row 1 closes-->
+            </div>
+            <!--mainBottom closes-->
+        </div>
+        <!-- Main Part Closes -->
+    </div>
+
+    <!--Player-->
+    <div class="player">
+        <div class="PlayerArtist">
+        </div>
+        <div class="PlayerControl">
+            <div class="PlayerControlButton">
+                <a href=""><i class="fa fa-backward"></i></a>
+                <a style="display: none;" id="pauseBtn" href="#"><i class="fa fa-pause-circle"></i></a>
+                <a id="playBtn" href="#"><i class="fa fa-play-circle"></i></i></a>
+                <a href=""><i class="fa fa-forward"></i></a>
+            </div>
+
+            <div class="PlayerControlProgress">
+                <!-- <div style="width:0%;" class="PlayerControlProgress2"></div> -->
+            </div>
+
+        </div>
+    </div>
+
+    <audio id="audioplayer" style="position: absolute; left: 0; top: 0; z-index: -999; opacity: 0;" controls="">
+
+
+    <script>
+            var audioPlayer = document.getElementById('audioplayer');
+            var loaded = false;
+            var playBtn = document.getElementById('playBtn');
+            var pauseBtn = document.getElementById('pauseBtn');
+            // When pause button is clicked
+            pauseBtn.addEventListener('click',(e)=>{
+                e.preventDefault();
+            // The Event interface's preventDefault() method tells the user agent 
+            // that if the event does not get explicitly handled, its default 
+            // action should not be taken as it normally would be.
+                playBtn.style.display = "inline";
+                pauseBtn.style.display = "none";
+                audioPlayer.pause();
+                return false;
+            });
+            // When play button is clickes (DOM element)
+            playBtn.addEventListener('click',(e)=>{
+                e.preventDefault();
+
+                playBtn.style.display = "none";
+                pauseBtn.style.display = "inline";
+                audioPlayer.play();
+                return false;
+            });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+@import url('');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    overflow-x: hidden;
+    background-size: 300% 300%;
+    background-image: linear-gradient(-45deg, #359cd0 0%, #38037d 25%, #550e6f 51%, #945205 100%);
+    -webkit-animation: AnimateBG 20s ease infinite;
+    animation: AnimateBG 20s ease infinite;
+}
+
+@keyframes AnimateBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: linear-gradient(to bottom, #f1f4f9, #dff1ff); */
+}
+
+
+/* section .color {
+    position: absolute;
+    filter: blur(150px);
+}
+
+section .color:nth-child(1) {
+    top: -350px;
+    width: 600px;
+    height: 600px;
+    background: #ff359b;
+}
+
+section .color:nth-child(2) {
+    bottom: -150px;
+    left: 100px;
+    width: 500px;
+    height: 500px;
+    background: #fffd87;
+}
+
+section .color:nth-child(3) {
+    bottom: 50px;
+    left: 100px;
+    width: 300px;
+    height: 300px;
+    background: #00d2ff;
+} */
+
+.box {
+    position: relative;
+}
+
+.box .square {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    animation: animate 10s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+}
+
+@keyframes animate {
+    0%,
+    100% {
+        transform: translateY(-40px);
+    }
+    50% {
+        transform: translateY(40px);
+    }
+}
+
+.box .square:nth-child(1) {
+    top: -50px;
+    right: -60px;
+    width: 100px;
+    height: 100px;
+}
+
+.box .square:nth-child(2) {
+    top: 150px;
+    left: -100px;
+    width: 120px;
+    height: 120px;
+    z-index: 2;
+}
+
+.box .square:nth-child(3) {
+    bottom: 50px;
+    right: -60px;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+}
+
+.box .square:nth-child(4) {
+    bottom: -80px;
+    right: 100px;
+    width: 50px;
+    height: 50px;
+}
+
+.box .square:nth-child(5) {
+    top: -80px;
+    left: 140px;
+    width: 60px;
+    height: 60px;
+}
+
+.Container {
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+
+.form h2 {
+    position: relative;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: solid white;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+
+/* .form h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 100%; or 100px
+    height: 4px;
+    background: #fff;
+} */
+
+.form .inputBox {
+    width: 100%;
+    margin-top: 20px;
+    /* display: flex;
+    position: relative; */
+}
+
+.inputBox span {
+    position: absolute;
+    width: 60px;
+    /* line-height: 50px; */
+    color: white;
+    padding: 11px 10px;
+    margin: 0 10px;
+}
+
+.inputBox span #show_eye,
+#hide_eye {
+    position: absolute;
+    color: white;
+    margin-left: 250px;
+    padding-left: 10px;
+    /* padding-right: 30px; */
+}
+
+.form .inputBox input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding-left: 45px;
+}
+
+.form .inputBox input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+}
+
+.form .inputBox input::placeholder {
+    /* padding-left: 25px; */
+    color: #fff;
+}
+
+.form .form-check {
+    color: #fff;
+    padding-top: 20px;
+    font-weight: 300;
+}
+
+.form .inputBox input[type="submit"],
+input[type="reset"] {
+    /* background: rgb(0, 0, 0); */
+    /* color: #fff; */
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    /* Changes */
+    max-width: 120px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    /* border: none; */
+}
+
+.form .inputBox input[type="reset"] {
+    margin-left: 10px;
+}
+
+.form .inputBox input[type="submit"]:hover,
+input[type="reset"]:hover {
+    /* border: 2px black; */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.forget {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.forget a {
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+}
+
+@media (max-width: 420px) {
+    .boxContainer {
+        width: 360px;
+    }
+    .form {
+        padding: 36px;
+    }
+}
+
+@media (max-width: 390px) {
+    .boxContainer {
+        width: 320px;
+    }
+    .form {
+        padding: 32px;
+    }
+}

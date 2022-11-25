@@ -1,0 +1,179 @@
+:root {
+    --Background: #DEEFF8;
+    --Searchform: #023047;
+    --RussianGreen: #659B5E;
+    --FernGreen: #556F44;
+    --DarkGreen: #283F3B;
+    --Grey: #393D3F;
+    --Pink: #C98CA7;
+  }
+
+#box, #box-two, #box-three{
+    position: relative;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Prata', serif;
+    /* font-weight: 600; */
+    background-color: var(--Background);
+    font-size: 20px;
+    color: var(--DarkGreen);
+}
+
+.background-color-base{
+    margin: -10px;
+    position: absolute;
+    z-index: -2;
+    background-color:#c98ca7;
+    height: 150vh;
+    width: 100vw;
+}
+
+.background-color{
+    margin: -10px;
+    position: absolute;
+    z-index: -1;
+    background-color: var(--Background);
+    height: 150vh;
+    width: 100vw;
+}
+
+#search-form{
+    background-color: var(--Searchform);
+    margin: 50px 0 0 0;
+    /* width: 500px; */
+    /* height: 100px; */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--Background);
+    border-radius: 15px;
+    opacity: .1;
+    
+}
+
+form input{
+    margin: 10px;
+    font-family: 'Prata', serif;
+    border-radius: 5px;
+    padding: 3px 10px 3px 10px;
+    border: none;
+    font-size: 20px;
+}
+
+input[type="submit"] {
+    display: block;
+    background-color: var(--Background);
+    color: var(--Searchform);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 3px 10px 3px 10px;
+    font-size: 20px;
+   }
+
+input[type="submit"]:hover {
+    background-color: var(--Background);
+    transition: .2s;
+}
+
+.song-containers{
+    display: flex;
+    margin: 10px;
+}
+
+.song-output{
+    margin: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+}
+
+.song-output-artist{
+    /* margin: 10px; */
+    background-color: white;
+    color: grey;
+    font-size: 15px;
+    /* padding: 10px;
+    border-radius: 5px;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white; */
+}
+
+.song-output:hover{
+    border-bottom: 3px solid var(--Pink);
+    cursor: pointer;
+}
+
+.stop-box{
+    background-color: var(--Searchform);
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    position: relative;
+    display: none;
+    color: var(--Background);
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid var(--Searchform);
+    border-top: 3px solid var(--Searchform);
+}
+
+.stop-box:hover{
+    cursor: pointer;
+    transition: .2s;
+    border-bottom: 3px solid var(--Pink);
+}
+
+.show{
+    display: flex;
+}
+
+.hide{
+    position: absolute;
+    z-index: -3;
+}
+
+.stars, .stars-two{
+    position: absolute;
+    width: 100vw;
+    top: 0px;
+    opacity: .1;
+  }
+
+.stars img, .stars-two img{
+    position: absolute;
+    z-index: 0;
+  }
+  
+  .stars img:nth-child(1){width: 50px; top:10vh; left: 100px;}
+  .stars img:nth-child(2){width: 30px; top:20vh; left: 40px;}
+  .stars img:nth-child(3){width: 40px; top:60vh; left: 50px;}
+  .stars img:nth-child(4){width: 60px; top:10vh; right: 50px;}
+  .stars img:nth-child(5){width: 50px; top:30vh; right: 20px;}
+  .stars img:nth-child(6){width: 40px; top:80vh; right: 100px;}
+  .stars img:nth-child(7){width: 60px; top:40vh; left: 50px;}
+  .stars img:nth-child(8){width: 50px; top:50vh; right: 140px;}
+  .stars img:nth-child(9){width: 30px; top:70vh; left: 100px;}
+
+  .stars-two img:nth-child(1){width: 50px; top:15vh; right: 100px;}
+  .stars-two img:nth-child(2){width: 30px; top:25vh; right: 40px;}
+  .stars-two img:nth-child(3){width: 40px; top:65vh; right: 50px;}
+  .stars-two img:nth-child(4){width: 50px; top:25vh; right: 120px;}
+  .stars-two img:nth-child(5){width: 50px; top:35vh; left: 20px;}
+  .stars-two img:nth-child(6){width: 45px; top:85vh; left: 40px;}
+  .stars-two img:nth-child(7){width: 30px; top:45vh; left: 150px;}
+  .stars-two img:nth-child(8){width: 55px; top:55vh; left: 20px;}
+  .stars-two img:nth-child(9){width: 40px; top:75vh; left: 150px;}
+
+  .dancing-gif{
+      width: 300px;
+      height: 400px;
+  }

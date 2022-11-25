@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Roboto"; */
+    font-family: 'Serif', Garamound;
+}
+
+.headLogo {
+    color: white;
+    /* position: fixed; */
+    background-color: black;
+    /* padding-bottom: 20px; */
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(99, 6, 174)), to(rgb(227, 168, 59)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+i {
+    color: white;
+    padding: 0 10px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.sidebar {
+    float: left;
+    width: 250px;
+    padding: 10px 10px;
+    height: 100%;
+    overflow-y: auto;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.sidebar-bottom {
+    /* padding-top: 20px; */
+    padding-bottom: 100px;
+}
+
+.sidebarList {
+    margin: 20px 0;
+    color: rgb(190, 190, 190);
+}
+
+.sidebarList a {
+    color: rgb(190, 190, 190);
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    margin: 5px 0;
+}
+
+.sidebarList a.sidebarButtons i {
+    margin-right: 10px;
+}
+
+.sidebarList a.sidebar-select {
+    font-weight: bold;
+    color: white;
+    background-color: rgb(107, 107, 107);
+    border-radius: 5px;
+    box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.15);
+    /* background: -webkit-linear-gradient(#fff200, #ff0077); */
+}
+
+.sidebarList a.sidebarButtons:hover {
+    font-weight: bold;
+    color: white;
+    /* background-color: rgb(107, 107, 107); */
+    border-radius: 5px;
+    box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.15);
+    background: -webkit-linear-gradient(#610473, #d88e04);
+}
+
+.sidebarList .fa,
+.sidebarPlaylists .fa {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(99, 6, 174)), to(rgb(227, 168, 59)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sidebarList a.sidebar-select .fa {
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sidebarPlay {
+    margin-top: 12px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.sidebarPlay a {
+    padding: 2px 0;
+}
+
+.sidebarPlay:hover {
+    /* background: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 0, 128)), to(rgb(47, 1, 255))); */
+    background: -webkit-linear-gradient(#610473, #d88e04);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* border-left: 2px solid white; */
+}
+
+.bottomLine span {
+    display: inline-block;
+}
+
+.bottomLine span::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    background: linear-gradient(to left,#610473, #d88e04);
+    transition: width .3s;
+}
+
+.bottomLine span:hover::after {
+    width: 100%;
+}
+
+
+/* 
+.sidebarPlay:hover:before,
+.sidebarPlay:hover:after {
+    border: 0 solid transparent;
+    transition: all 0.3s;
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 24px;
+}
+
+.sidebarPlay:hover:before {
+    border-top: 2px solid #ffffff;
+    right: 0;
+    top: -4px;
+}
+
+.sidebarPlay:hover:after {
+    border-bottom: 2px solid #ffffff;
+    bottom: -4px;
+    left: 0;
+}
+
+.sidebarPlay:hover:before,
+.sidebarPlay:hover:after {
+    width: 100%;
+} */
+
+.sidebarPlay span {
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.sidebarPlaylists {
+    padding: 20px 0;
+    border-top: 1px solid rgb(40, 40, 40);
+    border-bottom: 1px solid rgb(40, 40, 40);
+}
+
+.sidebarPlaylists .fa {
+    padding-right: 25px;
+}
+
+.sidebarPlaylists a {
+    margin: 15px 0;
+    display: block;
+    color: rgb(190, 190, 190);
+    text-decoration: none;
+}
+
+.sidebarPlaylists a:hover {
+    color: white;
+    border-left: 3px solid rgb(255, 255, 255);
+}
+
+
+/*Main Part*/
+
+.main {
+    width: calc(100% - 250px);
+    background-color: rgb(24, 22, 22);
+    height: 100%;
+    float: left;
+    padding: 15px 60px;
+    overflow-y: auto;
+}
+
+.MainRow {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.mainBottom {
+    padding-bottom: 150px;
+}
+
+.RowTitle {
+    width: 100%;
+}
+
+.RowTitle h2 {
+    color: white;
+}
+
+.MainCol {
+    cursor: pointer;
+    width: 10%;
+    margin-right: 1.5%;
+    margin-top: 20px;
+    background-color: #2e2b2b;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.MainCol h3 {
+    color: white;
+    margin: 8px 0;
+    /* Word-wrap */
+    word-wrap: break-word;
+}
+
+.MainCol p {
+    color: rgb(124, 124, 124);
+    margin: 8px 0;
+    font-size: 13px;
+    text-align: left;
+}
+
+.MainCol img {
+    max-width: 125px;
+    border-radius: 5px;
+}
+
+.player {
+    width: 100%;
+    padding: 20px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    background-color: rgb(59, 55, 55);
+}
+
+.PlayerArtist {
+    width: 40%;
+}
+
+.PlayerArtist img {
+    max-width: 70px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 10px;
+}
+
+.PlayerArtist h3 {
+    display: inline-block;
+    color: white;
+    font-weight: normal;
+    font-size: 20px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.PlayerArtist h3>span {
+    color: rgb(200, 200, 200);
+    font-size: 13px;
+}
+
+.PlayerControl {
+    width: 25%;
+    text-align: center;
+}
+
+.PlayerControlButton a {
+    color: white;
+    margin: 8px 15px;
+    font-size: 18px;
+}
+
+.PlayerControlProgress {
+    width: 100%;
+    max-width: 600px;
+    height: 7px;
+    margin-top: 20px;
+    position: relative;
+    border-radius: 8px;
+    display: inline-block;
+    background: rgb(130, 130, 130);
+}
+
+
+/* .PlayerControlProgress2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 7px;
+    border-radius: 8px;
+    background-color: white;
+} */
+
+@media screen and (max-width: 1700px) {
+    .MainCol {
+        width: 23%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        width: 100%;
+    }
+    .sidebar {
+        display: none;
+    }
+    .MainCol {
+        width: 48%;
+        margin-right: 2%;
+    }
+    /* .MainCol img {
+        width: auto;
+    } */
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Form</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/password.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+    <script>
+        function resetFunc() {
+            document.getElementById("SignUp").reset();
+        }
+    </script>
+</head>
+
+<body>
+    <section>
+        <div class="box">
+            <div class="square" style="--i:0;"></div>
+            <div class="square" style="--i:1;"></div>
+            <div class="square" style="--i:2;"></div>
+            <div class="square" style="--i:3;"></div>
+            <div class="square" style="--i:4;"></div>
+            <div class="Container">
+                <div class="form">
+                    <center>
+                        <h2> <i style="font-family: 'Serif', serif;">Contact Us Form</i></h2>
+                    </center>
+                    <hr>
+                    <form name="signupForm" id="SignUp" action="" method="post" onsubmit="return validateForm()">
+                        <div class="inputBox">
+                            <span class="fa fa-user-circle"></span>
+                            <input type="text" placeholder="First Name" size="70" name="fname">
+                        </div>
+                        <div class="inputBox">
+                            <span class="fa fa-user-circle"></span>
+                            <input type="text" placeholder="Last Name" size="70" name="lname" required>
+                        </div>
+                        <div class="inputBox">
+                            <span class="fa fa-envelope"></span>
+                            <input type="text" placeholder="Email" size="70" name="email" required>
+                            <!-- <input type="email" placeholder="Email" size="70" name="email" required> -->
+                        </div>
+                        <div class="inputBox">
+                            <span class="fa fa-user"></span>
+                            <input type="text" placeholder="Message" size="30" name="username">
+                        </div>
+                        <!-- <div class="inputBox">
+                            <span class="fa fa-key"></span>
+                            <input type="password" placeholder="Password" size="20" name="pass" required>
+                        </div>
+                        <div class="inputBox">
+                            <span class="fa fa-key"></span>
+                            <input type="password" placeholder="Confirm Password" size="20" name="passconfirm" required>
+                        </div> -->
+                        <div class="inputBox">
+                            <center><input type="submit" value="SignUp" name="submit">
+                                <input type="reset" value="Reset" name="Reset" onclick="resetFunc()" />
+                            </center>
+                        </div>
+
+                        <center>
+                            <!-- <p class="forget">Already have an account? <a href="login.html">Login</a></p> -->
+                            <p class="forget"><a href="index.html">Back To Home</a></p>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function validateForm() {
+            var name = document.signupForm.username.value;
+            var pass = document.signupForm.pass.value;
+            var fname = document.signupForm.fname.value;
+            var lname = document.signupForm.lname.value;
+            var email = document.signupForm.email.value;
+            var username = document.signupForm.username.value;
+            var passconfirm = document.signupForm.passconfirm.value;
+
+            if (fname == null || fname == "") {
+                window.alert("Please enter your First Name.");
+                window.location = 'file:///Users/sshirodkar/Desktop/ITL/signup.html';
+            } else if (lname == null || lname == "") {
+                alert("Please enter your Last Name.");
+                window.location = 'file:///Users/sshirodkar/Desktop/ITL/signup.html';
+            } else if (email == null || email == "" || ValidateEmail(email) ==  false) {
+                alert("Please enter a valid e-mail address.");
+                window.location = 'file:///Users/sshirodkar/Desktop/ITL/signup.html';
+            } else if (username == null || username == "") {
+                alert("Please enter your username.");
+                window.location = 'file:///Users/sshirodkar/Desktop/ITL/signup.html';
+            } else if (pass == null || pass == "") {
+                alert("Please enter your password");
+                window.location = 'file:///Users/sshirodkar/Desktop/ITL/signup.html';
+            } else if (passconfirm == null || passconfirm == "") {
+                alert("Please enter your password again");
+                window.location = 'file:///Users/sshirodkar/Desktop/ITL/signup.html';
+            } else if (pass.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                pass.focus();
+                window.location = 'file:///Users/sshirodkar/Desktop/ITL/signup.html';
+            } else if (pass.length > 15) {
+                alert("Password must be less than 16 characters long.");
+                window.location = 'file:///Users/sshirodkar/Desktop/ITL/signup.html';
+            } else if (validatePass(pass) ==  false) {
+                alert('Password should contain at least 1 uppercase character, at least 1 lowercase character, at least 1 digit & at least 1 special character')
+                window.location = 'file:///Users/sshirodkar/Desktop/ITL/signup.html';
+            } else if (pass != passconfirm) {
+                alert("Passwords must be same!");
+                passconfirm.focus();
+                window.location = 'file:///Users/sshirodkar/Desktop/ITL/signup.html';
+            } else {
+                alert('Registration is Successfull!!')
+                window.open("file:///Users/sshirodkar/Desktop/ITL/home.html");
+            }
+
+            // var fname = document.forms["signupForm"]["fname"];
+            // var lname = document.forms["signupForm"]["lname"];
+            // var email = document.forms["signupForm"]["email"];
+            // var username = document.forms["signupForm"]["username"];
+            // var pass = document.forms["signupForm"]["pass"];
+            // var passconfirm = document.forms["signupForm"]["passconfirm"];
+
+            // if (fname == null || fname == "") {
+            //     alert("Please enter your First Name.");
+            //     fname.focus();
+            //     return  ;
+            // }
+
+            // if (lname == null || lname == "") {
+            //     alert("Please enter your Last Name.");
+            //     lname.focus();
+            //     return  ;
+            // }
+
+            // if (email.value == "") {
+            //     alert("Please enter a valid e-mail address.");
+            //     email.focus();
+            //     return  ;
+            // }
+
+            // if (username.value == "") {
+            //     alert("Please enter your username.");
+            //     username.focus();
+            //     return  ;
+            // }
+
+            // if (pass.value == "") {
+            //     alert("Please enter your password");
+            //     pass.focus();
+            //     return  ;
+            // }
+
+            // if (passconfirm.value == "") {
+            //     alert("Please enter your password again");
+            //     passconfirm.focus();
+            //     return  ;
+            // }
+            // if (pass.length < 6) {
+            //     alert("Password must be at least 6 characters long.");
+            //     pass.focus();
+            //     return  ;
+            // }
+            // i
+            // if (pass.value != passconfirm.value) {
+            //     alert("Password must be same!");
+            //     passconfirm.focus();
+            //     return  ;
+            // }
+        }
+
+        function ValidateEmail(inputText) {
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (inputText.match(mailformat)) {
+                // alert("Valid email address!");
+                return true;
+            } else {
+                return  ;
+            }
+        }
+    </script>
+</body>
+
+
+</html>

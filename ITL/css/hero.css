@@ -1,0 +1,59 @@
+.hero {
+    /* background: var(--hero-bg-color); */
+    background: url('../img/nightclub.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 11rem;
+}
+
+.hero-container {
+    padding: 20rem 1.5rem 0 1.5rem;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 5rem;
+    color: var(--white);
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    line-height: 5rem;
+    letter-spacing: -0.3rem;
+}
+
+.hero-button {
+    padding: 2rem 6rem;
+    border: 3px solid var(--white);
+    border-radius: 3rem;
+    color: var(--white);
+    background: var(--grad1);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    margin-bottom: 3rem;
+}
+
+.hero-button:hover {
+    background: var(--red);
+}
+
+.hero-content a i {
+    color: white;
+    font-size: 5rem;
+    padding: 8rem 0 3rem;
+}
+
+.hero-content a .fa:hover {
+    color: var(--red);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
